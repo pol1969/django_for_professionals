@@ -4,77 +4,72 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
-ALLOWED_HOSTS	bookstore_project/settings.py	/^ALLOWED_HOSTS = []$/;"	v
-AUTH_PASSWORD_VALIDATORS	bookstore_project/settings.py	/^AUTH_PASSWORD_VALIDATORS = [$/;"	v
-AUTH_USER_MODEL	bookstore_project/settings.py	/^AUTH_USER_MODEL = 'users.CustomUser' # new$/;"	v
+urlpatterns	bookstore_project/urls.py	/^urlpatterns = [$/;"	v
+application	bookstore_project/wsgi.py	/^application = get_wsgi_application()$/;"	v
 BASE_DIR	bookstore_project/settings.py	/^BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))$/;"	v
-CustomUser	users/admin.py	/^CustomUser = get_user_model()$/;"	v
-CustomUser	users/models.py	/^class CustomUser(AbstractUser):$/;"	c
-CustomUserAdmin	users/admin.py	/^class CustomUserAdmin(UserAdmin):$/;"	c
-CustomUserChangeForm	users/forms.py	/^class CustomUserChangeForm(UserChangeForm):$/;"	c
-CustomUserCreationForm	users/forms.py	/^class CustomUserCreationForm(UserCreationForm):$/;"	c
-CustomUserTests	users/tests.py	/^class CustomUserTests(TestCase):$/;"	c
-DATABASES	bookstore_project/settings.py	/^DATABASES = {$/;"	v
-DEBUG	bookstore_project/settings.py	/^DEBUG = True$/;"	v
-HomePageView	pages/views.py	/^class HomePageView(TemplateView):$/;"	c
-HomepageTest	pages/tests.py	/^class HomepageTest(SimpleTestCase):$/;"	c
-INSTALLED_APPS	bookstore_project/settings.py	/^INSTALLED_APPS = [$/;"	v
-LANGUAGE_CODE	bookstore_project/settings.py	/^LANGUAGE_CODE = 'en-us'$/;"	v
-LOGIN_REDIRECT_URL	bookstore_project/settings.py	/^LOGIN_REDIRECT_URL = 'home'$/;"	v
-LOGOUT_REDIRECT_URL	bookstore_project/settings.py	/^LOGOUT_REDIRECT_URL = 'home'$/;"	v
-MIDDLEWARE	bookstore_project/settings.py	/^MIDDLEWARE = [$/;"	v
-Meta	users/forms.py	/^    class Meta:$/;"	c	class:CustomUserChangeForm
-Meta	users/forms.py	/^    class Meta:$/;"	c	class:CustomUserCreationForm
-Migration	users/migrations/0001_initial.py	/^class Migration(migrations.Migration):$/;"	c
-PagesConfig	pages/apps.py	/^class PagesConfig(AppConfig):$/;"	c
-ROOT_URLCONF	bookstore_project/settings.py	/^ROOT_URLCONF = 'bookstore_project.urls'$/;"	v
 SECRET_KEY	bookstore_project/settings.py	/^SECRET_KEY = '9j*0jf1qb5_0qmt^lz31(d&oc#--@i*#+lfk_4kd9=jbws&xx0'$/;"	v
-STATIC_URL	bookstore_project/settings.py	/^STATIC_URL = '\/static\/'$/;"	v
-SignupPageTests	users/tests.py	/^class SignupPageTests(TestCase):$/;"	c
-SignupPageView	users/views.py	/^class SignupPageView(generic.CreateView):$/;"	c
+DEBUG	bookstore_project/settings.py	/^DEBUG = True$/;"	v
+ALLOWED_HOSTS	bookstore_project/settings.py	/^ALLOWED_HOSTS = []$/;"	v
+INSTALLED_APPS	bookstore_project/settings.py	/^INSTALLED_APPS = [$/;"	v
+MIDDLEWARE	bookstore_project/settings.py	/^MIDDLEWARE = [$/;"	v
+ROOT_URLCONF	bookstore_project/settings.py	/^ROOT_URLCONF = 'bookstore_project.urls'$/;"	v
 TEMPLATES	bookstore_project/settings.py	/^TEMPLATES = [$/;"	v
+WSGI_APPLICATION	bookstore_project/settings.py	/^WSGI_APPLICATION = 'bookstore_project.wsgi.application'$/;"	v
+DATABASES	bookstore_project/settings.py	/^DATABASES = {$/;"	v
+AUTH_PASSWORD_VALIDATORS	bookstore_project/settings.py	/^AUTH_PASSWORD_VALIDATORS = [$/;"	v
+LANGUAGE_CODE	bookstore_project/settings.py	/^LANGUAGE_CODE = 'en-us'$/;"	v
 TIME_ZONE	bookstore_project/settings.py	/^TIME_ZONE = 'UTC'$/;"	v
 USE_I18N	bookstore_project/settings.py	/^USE_I18N = True$/;"	v
 USE_L10N	bookstore_project/settings.py	/^USE_L10N = True$/;"	v
 USE_TZ	bookstore_project/settings.py	/^USE_TZ = True$/;"	v
-UsersConfig	users/apps.py	/^class UsersConfig(AppConfig):$/;"	c
-WSGI_APPLICATION	bookstore_project/settings.py	/^WSGI_APPLICATION = 'bookstore_project.wsgi.application'$/;"	v
-add_form	users/admin.py	/^    add_form = CustomUserCreationForm$/;"	v	class:CustomUserAdmin
-application	bookstore_project/wsgi.py	/^application = get_wsgi_application()$/;"	v
-dependencies	users/migrations/0001_initial.py	/^    dependencies = [$/;"	v	class:Migration
-fields	users/forms.py	/^        fields = ('email', 'username',)$/;"	v	class:CustomUserCreationForm.Meta
-fields	users/forms.py	/^        fields = ('email','username',)$/;"	v	class:CustomUserChangeForm.Meta
-fields	users/migrations/0001_initial.py	/^            fields=[$/;"	v	class:Migration
-form	users/admin.py	/^    form = CustomUserChangeForm$/;"	v	class:CustomUserAdmin
-form_class	users/views.py	/^    form_class = CustomUserCreationForm$/;"	v	class:SignupPageView
-initial	users/migrations/0001_initial.py	/^    initial = True$/;"	v	class:Migration
-list_display	users/admin.py	/^    list_display = ['email','username',]$/;"	v	class:CustomUserAdmin
+STATIC_URL	bookstore_project/settings.py	/^STATIC_URL = '\/static\/'$/;"	v
+STATICFILES_DIRS	bookstore_project/settings.py	/^STATICFILES_DIRS = [os.path.join(BASE_DIR,'static'),]$/;"	v
+STATIC_ROOT	bookstore_project/settings.py	/^STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')$/;"	v
+STATICFILES_FINDERS	bookstore_project/settings.py	/^STATICFILES_FINDERS = [$/;"	v
+AUTH_USER_MODEL	bookstore_project/settings.py	/^AUTH_USER_MODEL = 'users.CustomUser' # new$/;"	v
+LOGIN_REDIRECT_URL	bookstore_project/settings.py	/^LOGIN_REDIRECT_URL = 'home'$/;"	v
+LOGOUT_REDIRECT_URL	bookstore_project/settings.py	/^LOGOUT_REDIRECT_URL = 'home'$/;"	v
+CRISPY_TEMPLATE_PACK	bookstore_project/settings.py	/^CRISPY_TEMPLATE_PACK = 'bootstrap4'$/;"	v
 main	manage.py	/^def main():$/;"	f
-managers	users/migrations/0001_initial.py	/^            managers=[$/;"	v	class:Migration
-model	users/admin.py	/^    model = CustomUser$/;"	v	class:CustomUserAdmin
-model	users/forms.py	/^        model = get_user_model()$/;"	v	class:CustomUserChangeForm.Meta
-model	users/forms.py	/^        model = get_user_model()$/;"	v	class:CustomUserCreationForm.Meta
-name	pages/apps.py	/^    name = 'pages'$/;"	v	class:PagesConfig
-name	users/apps.py	/^    name = 'users'$/;"	v	class:UsersConfig
-name	users/migrations/0001_initial.py	/^            name='CustomUser',$/;"	v	class:Migration
-operations	users/migrations/0001_initial.py	/^    operations = [$/;"	v	class:Migration
-options	users/migrations/0001_initial.py	/^            options={$/;"	v	class:Migration
-setUp	pages/tests.py	/^    def setUp(self):$/;"	m	class:HomepageTest
-setUp	users/tests.py	/^    def setUp(self):$/;"	m	class:SignupPageTests
-success_url	users/views.py	/^    success_url = reverse_lazy('login')$/;"	v	class:SignupPageView
-template_name	pages/views.py	/^    template_name='home.html'$/;"	v	class:HomePageView
-template_name	users/views.py	/^    template_name = 'signup.html'$/;"	v	class:SignupPageView
-test_create_superuser	users/tests.py	/^    def test_create_superuser(self):$/;"	m	class:CustomUserTests
-test_create_user	users/tests.py	/^    def test_create_user(self):$/;"	m	class:CustomUserTests
-test_homepage_contains_correct_html	pages/tests.py	/^    def test_homepage_contains_correct_html(self):$/;"	m	class:HomepageTest
-test_homepage_does_not_contains_incorrect_html	pages/tests.py	/^    def test_homepage_does_not_contains_incorrect_html(self):$/;"	m	class:HomepageTest
-test_homepage_status_code	pages/tests.py	/^    def test_homepage_status_code(self):$/;"	m	class:HomepageTest
-test_homepage_template	pages/tests.py	/^    def test_homepage_template(self):$/;"	m	class:HomepageTest
-test_homepage_url_name	pages/tests.py	/^    def test_homepage_url_name(self):$/;"	m	class:HomepageTest
-test_homepage_url_resolves_homepageview	pages/tests.py	/^    def test_homepage_url_resolves_homepageview(self):$/;"	m	class:HomepageTest
-test_signup_form	users/tests.py	/^    def test_signup_form(self):$/;"	m	class:SignupPageTests
-test_signup_template	users/tests.py	/^    def test_signup_template(self):$/;"	m	class:SignupPageTests
-test_signup_view	users/tests.py	/^    def test_signup_view(self):$/;"	m	class:SignupPageTests
-urlpatterns	bookstore_project/urls.py	/^urlpatterns = [$/;"	v
-urlpatterns	pages/urls.py	/^urlpatterns = [                                                                                                                                                     $/;"	v
-urlpatterns	users/urls.py	/^urlpatterns = [$/;"	v
+calendars	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^    var DateTimeShortcuts = {$/;"	p	class:DateTimeShortcuts
+serverOffset	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var serverOffset = body.getAttribute('data-admin-utc-offset');$/;"	v
+inputs	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var inputs = document.getElementsByTagName('input');$/;"	v
+serverOffset	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var serverOffset = body.getAttribute('data-admin-utc-offset');$/;"	v
+timezoneOffset	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var timezoneOffset = DateTimeShortcuts.timezoneOffset \/ 3600;$/;"	v
+message	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var message;$/;"	v
+warning	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var warning = document.createElement('span');$/;"	v
+DateTimeShortcuts.dismissClockFunc	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            DateTimeShortcuts.clockInputs[num] = inp;$/;"	f
+shortcuts_span	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var shortcuts_span = document.createElement('span');$/;"	v
+now_link	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var now_link = document.createElement('a');$/;"	v
+clock_link	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var clock_link = document.createElement('a');$/;"	v
+clock_box	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var clock_box = document.createElement('div');$/;"	v
+time_list	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var time_list = quickElement('ul', clock_box);$/;"	v
+name	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var name = typeof DateTimeShortcuts.clockHours[inp.name] === 'undefined' ? 'default_' : inp.name;$/;"	v
+cancel_p	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var cancel_p = quickElement('p', clock_box);$/;"	v
+cancel_link	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var cancel_link = quickElement('a', cancel_p, gettext('Cancel'), 'href', '#');$/;"	v
+clock_link	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var clock_link = document.getElementById(DateTimeShortcuts.clockLinkName + num);$/;"	v
+DateTimeShortcuts.dismissCalendarFunc	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            DateTimeShortcuts.calendarInputs[num] = inp;$/;"	f
+shortcuts_span	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var shortcuts_span = document.createElement('span');$/;"	v
+today_link	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var today_link = document.createElement('a');$/;"	v
+cal_link	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var cal_link = document.createElement('a');$/;"	v
+cal_box	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var cal_box = document.createElement('div');$/;"	v
+cal_nav	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var cal_nav = quickElement('div', cal_box);$/;"	v
+cal_nav_prev	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var cal_nav_prev = quickElement('a', cal_nav, '<', 'href', '#');$/;"	v
+cal_nav_next	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var cal_nav_next = quickElement('a', cal_nav, '>', 'href', '#');$/;"	v
+cal_main	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var cal_main = quickElement('div', cal_box, '', 'id', DateTimeShortcuts.calendarDivName2 + num);$/;"	v
+shortcuts	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var shortcuts = quickElement('div', cal_box);$/;"	v
+day_link	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var day_link = quickElement('a', shortcuts, gettext('Yesterday'), 'href', '#');$/;"	v
+cancel_p	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var cancel_p = quickElement('p', cal_box);$/;"	v
+cancel_link	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var cancel_link = quickElement('a', cancel_p, gettext('Cancel'), 'href', '#');$/;"	v
+cal_link	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var cal_link = document.getElementById(DateTimeShortcuts.calendarLinkName + num);$/;"	v
+inp	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var inp = DateTimeShortcuts.calendarInputs[num];$/;"	v
+id_to_windowname	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function id_to_windowname(text) {$/;"	f
+windowname_to_id	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function windowname_to_id(text) {$/;"	f
+showAdminPopup	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function showAdminPopup(triggeringLink, name_regexp, add_popup) {$/;"	f
+showRelatedObjectLookupPopup	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function showRelatedObjectLookupPopup(triggeringLink) {$/;"	f
+dismissRelatedLookupPopup	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function dismissRelatedLookupPopup(win, chosenId) {$/;"	f
+showRelatedObjectPopup	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function showRelatedObjectPopup(triggeringLink) {$/;"	f
+updateRelatedObjectLinks	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function updateRelatedObjectLinks(triggeringLink) {$/;"	f
+dismissAddRelatedObjectPopup	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function dismissAddRelatedObjectPopup(win, newId, newRepr) {$/;"	f
+dismissChangeRelatedObjectPopup	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function dismissChangeRelatedObjectPopup(win, objId, newRepr, newId) {$/;"	f
+dismissDeleteRelatedObjectPopup	staticfiles/admin/js/admin/RelatedObjectLooku

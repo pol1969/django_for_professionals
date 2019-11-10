@@ -5,22 +5,51 @@
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
 ALLOWED_HOSTS	settings.py	/^ALLOWED_HOSTS = []$/;"	v
+ALLOWED_HOSTS	settings_o.py	/^ALLOWED_HOSTS = []$/;"	v
 AUTH_PASSWORD_VALIDATORS	settings.py	/^AUTH_PASSWORD_VALIDATORS = [$/;"	v
-AUTH_USER_MODEL	settings.py	/^AUTH_USER_MODEL = 'users.CustomUser' # new$/;"	v
+AUTH_PASSWORD_VALIDATORS	settings_o.py	/^AUTH_PASSWORD_VALIDATORS = [$/;"	v
+AUTH_USER_MODEL	settings.py	/^AUTH_USER_MODEL = 'users.CustomUser'$/;"	v
+AUTH_USER_MODEL	settings_o.py	/^AUTH_USER_MODEL = 'users.CustomUser' # new$/;"	v
 BASE_DIR	settings.py	/^BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))$/;"	v
+BASE_DIR	settings_o.py	/^BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))$/;"	v
+CRISPY_TEMPLATE_PACK	settings.py	/^CRISPY_TEMPLATE_PACK = 'bootstrap4'$/;"	v
 DATABASES	settings.py	/^DATABASES = {$/;"	v
+DATABASES	settings_o.py	/^DATABASES = {$/;"	v
 DEBUG	settings.py	/^DEBUG = True$/;"	v
+DEBUG	settings_o.py	/^DEBUG = True$/;"	v
 INSTALLED_APPS	settings.py	/^INSTALLED_APPS = [$/;"	v
+INSTALLED_APPS	settings_o.py	/^INSTALLED_APPS = [$/;"	v
 LANGUAGE_CODE	settings.py	/^LANGUAGE_CODE = 'en-us'$/;"	v
+LANGUAGE_CODE	settings_o.py	/^LANGUAGE_CODE = 'en-us'$/;"	v
+LOGIN_REDIRECT_URL	settings.py	/^LOGIN_REDIRECT_URL = 'home'$/;"	v
+LOGIN_REDIRECT_URL	settings_o.py	/^LOGIN_REDIRECT_URL = 'home'$/;"	v
+LOGOUT_REDIRECT_URL	settings.py	/^LOGOUT_REDIRECT_URL = 'home'$/;"	v
+LOGOUT_REDIRECT_URL	settings_o.py	/^LOGOUT_REDIRECT_URL = 'home'$/;"	v
 MIDDLEWARE	settings.py	/^MIDDLEWARE = [$/;"	v
+MIDDLEWARE	settings_o.py	/^MIDDLEWARE = [$/;"	v
 ROOT_URLCONF	settings.py	/^ROOT_URLCONF = 'bookstore_project.urls'$/;"	v
-SECRET_KEY	settings.py	/^SECRET_KEY = '9j*0jf1qb5_0qmt^lz31(d&oc#--@i*#+lfk_4kd9=jbws&xx0'$/;"	v
+ROOT_URLCONF	settings_o.py	/^ROOT_URLCONF = 'bookstore_project.urls'$/;"	v
+SECRET_KEY	settings.py	/^SECRET_KEY = 'em1ozs_va&3-0(!9_c#2uq_7yy$%-uj2v4h%+(hn+^1zalbe!l'$/;"	v
+SECRET_KEY	settings_o.py	/^SECRET_KEY = '9j*0jf1qb5_0qmt^lz31(d&oc#--@i*#+lfk_4kd9=jbws&xx0'$/;"	v
+STATICFILES_DIRS	settings.py	/^STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]$/;"	v
+STATICFILES_DIRS	settings_o.py	/^STATICFILES_DIRS = [os.path.join(BASE_DIR,'static'),]$/;"	v
+STATICFILES_FINDERS	settings.py	/^STATICFILES_FINDERS = [$/;"	v
+STATICFILES_FINDERS	settings_o.py	/^STATICFILES_FINDERS = [$/;"	v
+STATIC_ROOT	settings.py	/^STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')$/;"	v
+STATIC_ROOT	settings_o.py	/^STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')$/;"	v
 STATIC_URL	settings.py	/^STATIC_URL = '\/static\/'$/;"	v
+STATIC_URL	settings_o.py	/^STATIC_URL = '\/static\/'$/;"	v
 TEMPLATES	settings.py	/^TEMPLATES = [$/;"	v
+TEMPLATES	settings_o.py	/^TEMPLATES = [$/;"	v
 TIME_ZONE	settings.py	/^TIME_ZONE = 'UTC'$/;"	v
+TIME_ZONE	settings_o.py	/^TIME_ZONE = 'UTC'$/;"	v
 USE_I18N	settings.py	/^USE_I18N = True$/;"	v
+USE_I18N	settings_o.py	/^USE_I18N = True$/;"	v
 USE_L10N	settings.py	/^USE_L10N = True$/;"	v
+USE_L10N	settings_o.py	/^USE_L10N = True$/;"	v
 USE_TZ	settings.py	/^USE_TZ = True$/;"	v
+USE_TZ	settings_o.py	/^USE_TZ = True$/;"	v
 WSGI_APPLICATION	settings.py	/^WSGI_APPLICATION = 'bookstore_project.wsgi.application'$/;"	v
+WSGI_APPLICATION	settings_o.py	/^WSGI_APPLICATION = 'bookstore_project.wsgi.application'$/;"	v
 application	wsgi.py	/^application = get_wsgi_application()$/;"	v
 urlpatterns	urls.py	/^urlpatterns = [$/;"	v
