@@ -28,8 +28,17 @@ STATIC_ROOT	bookstore_project/settings.py	/^STATIC_ROOT = os.path.join(BASE_DIR,
 STATICFILES_FINDERS	bookstore_project/settings.py	/^STATICFILES_FINDERS = [$/;"	v
 AUTH_USER_MODEL	bookstore_project/settings.py	/^AUTH_USER_MODEL = 'users.CustomUser' # new$/;"	v
 LOGIN_REDIRECT_URL	bookstore_project/settings.py	/^LOGIN_REDIRECT_URL = 'home'$/;"	v
-LOGOUT_REDIRECT_URL	bookstore_project/settings.py	/^LOGOUT_REDIRECT_URL = 'home'$/;"	v
+ACCOUNT_LOGOUT_REDIRECT	bookstore_project/settings.py	/^ACCOUNT_LOGOUT_REDIRECT = 'home'$/;"	v
 CRISPY_TEMPLATE_PACK	bookstore_project/settings.py	/^CRISPY_TEMPLATE_PACK = 'bootstrap4'$/;"	v
+SITE_ID	bookstore_project/settings.py	/^SITE_ID = 1$/;"	v
+AUTHENTICATION_BACKENDS	bookstore_project/settings.py	/^AUTHENTICATION_BACKENDS = ($/;"	v
+EMAIL_BACKEND	bookstore_project/settings.py	/^EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'$/;"	v
+ACCOUNT_SESSION_REMEMBER	bookstore_project/settings.py	/^ACCOUNT_SESSION_REMEMBER = True$/;"	v
+ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE	bookstore_project/settings.py	/^ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False$/;"	v
+ACCOUNT_USERNAME_REQUIRED	bookstore_project/settings.py	/^ACCOUNT_USERNAME_REQUIRED = False$/;"	v
+ACCOUNT_AUTHENTICATION_METHOD	bookstore_project/settings.py	/^ACCOUNT_AUTHENTICATION_METHOD = 'email'$/;"	v
+ACCOUNT_EMAIL_REQUIRED	bookstore_project/settings.py	/^ACCOUNT_EMAIL_REQUIRED = True$/;"	v
+ACCOUNT_UNIQUE_EMAIL	bookstore_project/settings.py	/^ACCOUNT_UNIQUE_EMAIL = True$/;"	v
 main	manage.py	/^def main():$/;"	f
 calendars	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^    var DateTimeShortcuts = {$/;"	p	class:DateTimeShortcuts
 serverOffset	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var serverOffset = body.getAttribute('data-admin-utc-offset');$/;"	v
@@ -66,10 +75,4 @@ inp	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var inp = Date
 id_to_windowname	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function id_to_windowname(text) {$/;"	f
 windowname_to_id	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function windowname_to_id(text) {$/;"	f
 showAdminPopup	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function showAdminPopup(triggeringLink, name_regexp, add_popup) {$/;"	f
-showRelatedObjectLookupPopup	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function showRelatedObjectLookupPopup(triggeringLink) {$/;"	f
-dismissRelatedLookupPopup	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function dismissRelatedLookupPopup(win, chosenId) {$/;"	f
-showRelatedObjectPopup	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function showRelatedObjectPopup(triggeringLink) {$/;"	f
-updateRelatedObjectLinks	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function updateRelatedObjectLinks(triggeringLink) {$/;"	f
-dismissAddRelatedObjectPopup	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function dismissAddRelatedObjectPopup(win, newId, newRepr) {$/;"	f
-dismissChangeRelatedObjectPopup	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function dismissChangeRelatedObjectPopup(win, objId, newRepr, newId) {$/;"	f
-dismissDeleteRelatedObjectPopup	staticfiles/admin/js/admin/RelatedObjectLooku
+showRelatedObjectLookupPopup	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    funct
