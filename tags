@@ -7,8 +7,8 @@
 urlpatterns	bookstore_project/urls.py	/^urlpatterns = [$/;"	v
 application	bookstore_project/wsgi.py	/^application = get_wsgi_application()$/;"	v
 BASE_DIR	bookstore_project/settings.py	/^BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))$/;"	v
-SECRET_KEY	bookstore_project/settings.py	/^SECRET_KEY = '9j*0jf1qb5_0qmt^lz31(d&oc#--@i*#+lfk_4kd9=jbws&xx0'$/;"	v
-DEBUG	bookstore_project/settings.py	/^DEBUG = True$/;"	v
+SECRET_KEY	bookstore_project/settings.py	/^SECRET_KEY = os.environ.get('SECRET_KEY') $/;"	v
+DEBUG	bookstore_project/settings.py	/^DEBUG = int(os.environ.get('DEBUG',default=0))$/;"	v
 ALLOWED_HOSTS	bookstore_project/settings.py	/^ALLOWED_HOSTS = []$/;"	v
 INSTALLED_APPS	bookstore_project/settings.py	/^INSTALLED_APPS = [$/;"	v
 MIDDLEWARE	bookstore_project/settings.py	/^MIDDLEWARE = [$/;"	v
@@ -75,4 +75,4 @@ inp	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var inp = Date
 id_to_windowname	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function id_to_windowname(text) {$/;"	f
 windowname_to_id	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function windowname_to_id(text) {$/;"	f
 showAdminPopup	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function showAdminPopup(triggeringLink, name_regexp, add_popup) {$/;"	f
-showRelatedObjectLookupPopup	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    funct
+showRelatedObjectLookupPopup	staticfiles/admin/js/admin/RelatedObjectLookups.js	
