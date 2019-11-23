@@ -32,13 +32,19 @@ ACCOUNT_LOGOUT_REDIRECT	bookstore_project/settings.py	/^ACCOUNT_LOGOUT_REDIRECT 
 CRISPY_TEMPLATE_PACK	bookstore_project/settings.py	/^CRISPY_TEMPLATE_PACK = 'bootstrap4'$/;"	v
 SITE_ID	bookstore_project/settings.py	/^SITE_ID = 1$/;"	v
 AUTHENTICATION_BACKENDS	bookstore_project/settings.py	/^AUTHENTICATION_BACKENDS = ($/;"	v
-EMAIL_BACKEND	bookstore_project/settings.py	/^EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'$/;"	v
+EMAIL_BACKEND	bookstore_project/settings.py	/^EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'$/;"	v
+EMAIL_HOST	bookstore_project/settings.py	/^EMAIL_HOST = 'smtp.gmail.com'$/;"	v
+EMAIL_HOST_USER	bookstore_project/settings.py	/^EMAIL_HOST_USER = 'podberezsky1969@gmail.com'$/;"	v
+EMAIL_HOST_PASSWORD	bookstore_project/settings.py	/^EMAIL_HOST_PASSWORD = 'goHolzwege1969'$/;"	v
+EMAIL_PORT	bookstore_project/settings.py	/^EMAIL_PORT = 587$/;"	v
+EMAIL_USE_TLS	bookstore_project/settings.py	/^EMAIL_USE_TLS = True$/;"	v
 ACCOUNT_SESSION_REMEMBER	bookstore_project/settings.py	/^ACCOUNT_SESSION_REMEMBER = True$/;"	v
 ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE	bookstore_project/settings.py	/^ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False$/;"	v
 ACCOUNT_USERNAME_REQUIRED	bookstore_project/settings.py	/^ACCOUNT_USERNAME_REQUIRED = False$/;"	v
 ACCOUNT_AUTHENTICATION_METHOD	bookstore_project/settings.py	/^ACCOUNT_AUTHENTICATION_METHOD = 'email'$/;"	v
 ACCOUNT_EMAIL_REQUIRED	bookstore_project/settings.py	/^ACCOUNT_EMAIL_REQUIRED = True$/;"	v
 ACCOUNT_UNIQUE_EMAIL	bookstore_project/settings.py	/^ACCOUNT_UNIQUE_EMAIL = True$/;"	v
+DEFAULT_FROM_EMAIL	bookstore_project/settings.py	/^DEFAULT_FROM_EMAIL = 'admin@djangobookstore.com'$/;"	v
 main	manage.py	/^def main():$/;"	f
 calendars	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^    var DateTimeShortcuts = {$/;"	p	class:DateTimeShortcuts
 serverOffset	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var serverOffset = body.getAttribute('data-admin-utc-offset');$/;"	v
@@ -71,8 +77,4 @@ day_link	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var day_l
 cancel_p	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var cancel_p = quickElement('p', cal_box);$/;"	v
 cancel_link	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var cancel_link = quickElement('a', cancel_p, gettext('Cancel'), 'href', '#');$/;"	v
 cal_link	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var cal_link = document.getElementById(DateTimeShortcuts.calendarLinkName + num);$/;"	v
-inp	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var inp = DateTimeShortcuts.calendarInputs[num];$/;"	v
-id_to_windowname	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function id_to_windowname(text) {$/;"	f
-windowname_to_id	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function windowname_to_id(text) {$/;"	f
-showAdminPopup	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function showAdminPopup(triggeringLink, name_regexp, add_popup) {$/;"	f
-showRelatedObjectLookupPopup	staticfiles/admin/js/admin/RelatedObjectLookups.js	
+inp	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^ 
