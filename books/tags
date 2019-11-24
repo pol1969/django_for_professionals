@@ -1,0 +1,40 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Book	models.py	/^class Book(models.Model):$/;"	c
+BookAdmin	admin.py	/^class BookAdmin(admin.ModelAdmin):$/;"	c
+BookDetailView	views.py	/^class BookDetailView(DetailView):$/;"	c
+BookTest	tests.py	/^class BookTest(TestCase):$/;"	c
+BooksConfig	apps.py	/^class BooksConfig(AppConfig):$/;"	c
+BooksListView	views.py	/^class BooksListView(ListView):$/;"	c
+Migration	migrations/0001_initial.py	/^class Migration(migrations.Migration):$/;"	c
+__str__	models.py	/^    def __str__(self):                                                          $/;"	m	class:Book	file:
+author	models.py	/^    author = models.CharField(max_length=200)$/;"	v	class:Book
+context_object_name	views.py	/^    context_object_name = 'book'$/;"	v	class:BookDetailView
+context_object_name	views.py	/^    context_object_name = 'book_list'$/;"	v	class:BooksListView
+default	models.py	/^            default=uuid.uuid4,$/;"	v	class:Book
+dependencies	migrations/0001_initial.py	/^    dependencies = [$/;"	v	class:Migration
+editable	models.py	/^            editable=False)$/;"	v	class:Book
+fields	migrations/0001_initial.py	/^            fields=[$/;"	v	class:Migration
+get_absolute_url	models.py	/^    def get_absolute_url(self):$/;"	m	class:Book
+id	models.py	/^    id = models.UUIDField($/;"	v	class:Book
+initial	migrations/0001_initial.py	/^    initial = True$/;"	v	class:Migration
+list_display	admin.py	/^    list_display = ("title", "author", "price",)$/;"	v	class:BookAdmin
+model	views.py	/^    model = Book$/;"	v	class:BookDetailView
+model	views.py	/^    model = Book$/;"	v	class:BooksListView
+name	apps.py	/^    name = 'books'$/;"	v	class:BooksConfig
+name	migrations/0001_initial.py	/^            name='Book',$/;"	v	class:Migration
+operations	migrations/0001_initial.py	/^    operations = [$/;"	v	class:Migration
+price	models.py	/^    price = models.DecimalField(max_digits=6, decimal_places=2)$/;"	v	class:Book
+primary_key	models.py	/^            primary_key=True,$/;"	v	class:Book
+setUp	tests.py	/^    def setUp(self):$/;"	m	class:BookTest
+template_name	views.py	/^    template_name = 'books\/book_detail.html'$/;"	v	class:BookDetailView
+template_name	views.py	/^    template_name = 'books\/book_list.html'$/;"	v	class:BooksListView
+test_book_detail_view	tests.py	/^    def test_book_detail_view(self):$/;"	m	class:BookTest
+test_book_list_view	tests.py	/^    def test_book_list_view(self):$/;"	m	class:BookTest
+test_book_listing	tests.py	/^    def test_book_listing(self):$/;"	m	class:BookTest
+title	models.py	/^    title = models.CharField(max_length=200)$/;"	v	class:Book
+urlpatterns	urls.py	/^urlpatterns = [$/;"	v
