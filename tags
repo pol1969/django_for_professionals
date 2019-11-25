@@ -66,7 +66,23 @@ author	books/models.py	/^    author = models.CharField(max_length=200)$/;"	v	cla
 price	books/models.py	/^    price = models.DecimalField(max_digits=6, decimal_places=2)$/;"	v	class:Book
 __str__	books/models.py	/^    def __str__(self):                                                          $/;"	m	class:Book	file:
 get_absolute_url	books/models.py	/^    def get_absolute_url(self):$/;"	m	class:Book
+Review	books/models.py	/^class Review(models.Model):$/;"	c
+book	books/models.py	/^    book = models.ForeignKey($/;"	v	class:Review
+on_delete	books/models.py	/^            on_delete=models.CASCADE,$/;"	v	class:Review
+related_name	books/models.py	/^            related_name='reviews',$/;"	v	class:Review
+review	books/models.py	/^    review = models.CharField(max_length=255)$/;"	v	class:Review
+author	books/models.py	/^    author = models.ForeignKey($/;"	v	class:Review
+on_delete	books/models.py	/^            on_delete=models.CASCADE,$/;"	v	class:Review
+__str__	books/models.py	/^    def __str__(self):$/;"	m	class:Review	file:
+BookTest	books/tests.py	/^class BookTest(TestCase):$/;"	c
+setUp	books/tests.py	/^    def setUp(self):$/;"	m	class:BookTest
+test_book_listing	books/tests.py	/^    def test_book_listing(self):$/;"	m	class:BookTest
+test_book_list_view	books/tests.py	/^    def test_book_list_view(self):$/;"	m	class:BookTest
+test_book_detail_view	books/tests.py	/^    def test_book_detail_view(self):$/;"	m	class:BookTest
+ReviewInline	books/admin.py	/^class ReviewInline(admin.TabularInline):$/;"	c
+model	books/admin.py	/^    model=Review$/;"	v	class:ReviewInline
 BookAdmin	books/admin.py	/^class BookAdmin(admin.ModelAdmin):$/;"	c
+inlines	books/admin.py	/^    inlines = [$/;"	v	class:BookAdmin
 list_display	books/admin.py	/^    list_display = ("title", "author", "price",)$/;"	v	class:BookAdmin
 Migration	books/migrations/0001_initial.py	/^class Migration(migrations.Migration):$/;"	c
 initial	books/migrations/0001_initial.py	/^    initial = True$/;"	v	class:Migration
@@ -74,6 +90,11 @@ dependencies	books/migrations/0001_initial.py	/^    dependencies = [$/;"	v	class
 operations	books/migrations/0001_initial.py	/^    operations = [$/;"	v	class:Migration
 name	books/migrations/0001_initial.py	/^            name='Book',$/;"	v	class:Migration
 fields	books/migrations/0001_initial.py	/^            fields=[$/;"	v	class:Migration
+Migration	books/migrations/0002_review.py	/^class Migration(migrations.Migration):$/;"	c
+dependencies	books/migrations/0002_review.py	/^    dependencies = [$/;"	v	class:Migration
+operations	books/migrations/0002_review.py	/^    operations = [$/;"	v	class:Migration
+name	books/migrations/0002_review.py	/^            name='Review',$/;"	v	class:Migration
+fields	books/migrations/0002_review.py	/^            fields=[$/;"	v	class:Migration
 main	manage.py	/^def main():$/;"	f
 calendars	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^    var DateTimeShortcuts = {$/;"	p	class:DateTimeShortcuts
 serverOffset	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var serverOffset = body.getAttribute('data-admin-utc-offset');$/;"	v
@@ -106,16 +127,4 @@ day_link	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var day_l
 cancel_p	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var cancel_p = quickElement('p', cal_box);$/;"	v
 cancel_link	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var cancel_link = quickElement('a', cancel_p, gettext('Cancel'), 'href', '#');$/;"	v
 cal_link	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var cal_link = document.getElementById(DateTimeShortcuts.calendarLinkName + num);$/;"	v
-inp	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var inp = DateTimeShortcuts.calendarInputs[num];$/;"	v
-id_to_windowname	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function id_to_windowname(text) {$/;"	f
-windowname_to_id	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function windowname_to_id(text) {$/;"	f
-showAdminPopup	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function showAdminPopup(triggeringLink, name_regexp, add_popup) {$/;"	f
-showRelatedObjectLookupPopup	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function showRelatedObjectLookupPopup(triggeringLink) {$/;"	f
-dismissRelatedLookupPopup	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function dismissRelatedLookupPopup(win, chosenId) {$/;"	f
-showRelatedObjectPopup	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function showRelatedObjectPopup(triggeringLink) {$/;"	f
-updateRelatedObjectLinks	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function updateRelatedObjectLinks(triggeringLink) {$/;"	f
-dismissAddRelatedObjectPopup	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function dismissAddRelatedObjectPopup(win, newId, newRepr) {$/;"	f
-dismissChangeRelatedObjectPopup	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function dismissChangeRelatedObjectPopup(win, objId, newRepr, newId) {$/;"	f
-dismissDeleteRelatedObjectPopup	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function dismissDeleteRelatedObjectPopup(win, objId) {$/;"	f
-fields	staticfiles/admin/js/prepopulate_init.js	/^    var fields = $('#django-admin-prepopulated-fields-constants').data('prepopulatedFields');$/;"	v
-monthsOfYear	staticfiles/admin/js/calendar.js	/^    var CalendarNamespace = {$/;"	p	class:
+inp	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var inp = DateTimeShortcuts.ca
