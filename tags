@@ -45,6 +45,8 @@ ACCOUNT_AUTHENTICATION_METHOD	bookstore_project/settings.py	/^ACCOUNT_AUTHENTICA
 ACCOUNT_EMAIL_REQUIRED	bookstore_project/settings.py	/^ACCOUNT_EMAIL_REQUIRED = True$/;"	v
 ACCOUNT_UNIQUE_EMAIL	bookstore_project/settings.py	/^ACCOUNT_UNIQUE_EMAIL = True$/;"	v
 DEFAULT_FROM_EMAIL	bookstore_project/settings.py	/^DEFAULT_FROM_EMAIL = 'admin@djangobookstore.com'$/;"	v
+MEDIA_URL	bookstore_project/settings.py	/^MEDIA_URL = '\/media\/'$/;"	v
+MEDIA_ROOT	bookstore_project/settings.py	/^MEDIA_ROOT = os.path.join(BASE_DIR, 'media')$/;"	v
 urlpatterns	books/urls.py	/^urlpatterns = [$/;"	v
 BooksConfig	books/apps.py	/^class BooksConfig(AppConfig):$/;"	c
 name	books/apps.py	/^    name = 'books'$/;"	v	class:BooksConfig
@@ -64,6 +66,7 @@ editable	books/models.py	/^            editable=False)$/;"	v	class:Book
 title	books/models.py	/^    title = models.CharField(max_length=200)$/;"	v	class:Book
 author	books/models.py	/^    author = models.CharField(max_length=200)$/;"	v	class:Book
 price	books/models.py	/^    price = models.DecimalField(max_digits=6, decimal_places=2)$/;"	v	class:Book
+cover	books/models.py	/^    cover = models.ImageField(upload_to='covers\/', blank=True)$/;"	v	class:Book
 __str__	books/models.py	/^    def __str__(self):                                                          $/;"	m	class:Book	file:
 get_absolute_url	books/models.py	/^    def get_absolute_url(self):$/;"	m	class:Book
 Review	books/models.py	/^class Review(models.Model):$/;"	c
@@ -125,6 +128,4 @@ cal_main	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var cal_m
 shortcuts	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var shortcuts = quickElement('div', cal_box);$/;"	v
 day_link	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var day_link = quickElement('a', shortcuts, gettext('Yesterday'), 'href', '#');$/;"	v
 cancel_p	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var cancel_p = quickElement('p', cal_box);$/;"	v
-cancel_link	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var cancel_link = quickElement('a', cancel_p, gettext('Cancel'), 'href', '#');$/;"	v
-cal_link	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var cal_link = document.getElementById(DateTimeShortcuts.calendarLinkName + num);$/;"	v
-inp	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var inp = DateTimeShortcuts.ca
+cancel_link	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var cancel_link = quickElement('a', cancel_p, gettext('Cancel'), 'hre
