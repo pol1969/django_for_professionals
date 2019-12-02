@@ -50,14 +50,17 @@ MEDIA_ROOT	bookstore_project/settings.py	/^MEDIA_ROOT = os.path.join(BASE_DIR, '
 urlpatterns	books/urls.py	/^urlpatterns = [$/;"	v
 BooksConfig	books/apps.py	/^class BooksConfig(AppConfig):$/;"	c
 name	books/apps.py	/^    name = 'books'$/;"	v	class:BooksConfig
-BooksListView	books/views.py	/^class BooksListView(ListView):$/;"	c
-model	books/views.py	/^    model = Book$/;"	v	class:BooksListView
-context_object_name	books/views.py	/^    context_object_name = 'book_list'$/;"	v	class:BooksListView
-template_name	books/views.py	/^    template_name = 'books\/book_list.html'$/;"	v	class:BooksListView
-BookDetailView	books/views.py	/^class BookDetailView(DetailView):$/;"	c
+BookListView	books/views.py	/^class BookListView(LoginRequiredMixin,ListView):$/;"	c
+model	books/views.py	/^    model = Book$/;"	v	class:BookListView
+context_object_name	books/views.py	/^    context_object_name = 'book_list'$/;"	v	class:BookListView
+template_name	books/views.py	/^    template_name = 'books\/book_list.html'$/;"	v	class:BookListView
+login_url	books/views.py	/^    login_url = 'account_login'$/;"	v	class:BookListView
+BookDetailView	books/views.py	/^        DetailView):$/;"	c
 model	books/views.py	/^    model = Book$/;"	v	class:BookDetailView
 context_object_name	books/views.py	/^    context_object_name = 'book'$/;"	v	class:BookDetailView
 template_name	books/views.py	/^    template_name = 'books\/book_detail.html'$/;"	v	class:BookDetailView
+login_url	books/views.py	/^    login_url = 'account_login'$/;"	v	class:BookDetailView
+permission_required	books/views.py	/^    permission_required = 'books.special_status'$/;"	v	class:BookDetailView
 Book	books/models.py	/^class Book(models.Model):$/;"	c
 id	books/models.py	/^    id = models.UUIDField($/;"	v	class:Book
 primary_key	books/models.py	/^            primary_key=True,$/;"	v	class:Book
@@ -67,6 +70,8 @@ title	books/models.py	/^    title = models.CharField(max_length=200)$/;"	v	class
 author	books/models.py	/^    author = models.CharField(max_length=200)$/;"	v	class:Book
 price	books/models.py	/^    price = models.DecimalField(max_digits=6, decimal_places=2)$/;"	v	class:Book
 cover	books/models.py	/^    cover = models.ImageField(upload_to='covers\/', blank=True)$/;"	v	class:Book
+Meta	books/models.py	/^    class Meta:$/;"	c	class:Book
+permissions	books/models.py	/^        permissions = [$/;"	v	class:Book.Meta
 __str__	books/models.py	/^    def __str__(self):                                                          $/;"	m	class:Book	file:
 get_absolute_url	books/models.py	/^    def get_absolute_url(self):$/;"	m	class:Book
 Review	books/models.py	/^class Review(models.Model):$/;"	c
@@ -80,13 +85,19 @@ __str__	books/models.py	/^    def __str__(self):$/;"	m	class:Review	file:
 BookTest	books/tests.py	/^class BookTest(TestCase):$/;"	c
 setUp	books/tests.py	/^    def setUp(self):$/;"	m	class:BookTest
 test_book_listing	books/tests.py	/^    def test_book_listing(self):$/;"	m	class:BookTest
-test_book_list_view	books/tests.py	/^    def test_book_list_view(self):$/;"	m	class:BookTest
-test_book_detail_view	books/tests.py	/^    def test_book_detail_view(self):$/;"	m	class:BookTest
+test_book_list_view_for_logged_user	books/tests.py	/^    def test_book_list_view_for_logged_user(self):$/;"	m	class:BookTest
+test_book_list_view_for_logged_out_user	books/tests.py	/^    def test_book_list_view_for_logged_out_user(self):$/;"	m	class:BookTest
+test_book_list_view_for_logged_user	books/tests.py	/^    def test_book_list_view_for_logged_user(self):$/;"	m	class:BookTest
 ReviewInline	books/admin.py	/^class ReviewInline(admin.TabularInline):$/;"	c
 model	books/admin.py	/^    model=Review$/;"	v	class:ReviewInline
 BookAdmin	books/admin.py	/^class BookAdmin(admin.ModelAdmin):$/;"	c
 inlines	books/admin.py	/^    inlines = [$/;"	v	class:BookAdmin
 list_display	books/admin.py	/^    list_display = ("title", "author", "price",)$/;"	v	class:BookAdmin
+Migration	books/migrations/0004_auto_20191130_0655.py	/^class Migration(migrations.Migration):$/;"	c
+dependencies	books/migrations/0004_auto_20191130_0655.py	/^    dependencies = [$/;"	v	class:Migration
+operations	books/migrations/0004_auto_20191130_0655.py	/^    operations = [$/;"	v	class:Migration
+name	books/migrations/0004_auto_20191130_0655.py	/^            name='book',$/;"	v	class:Migration
+options	books/migrations/0004_auto_20191130_0655.py	/^            options={'permissions': [('special_status', 'Can read all books')]},$/;"	v	class:Migration
 Migration	books/migrations/0001_initial.py	/^class Migration(migrations.Migration):$/;"	c
 initial	books/migrations/0001_initial.py	/^    initial = True$/;"	v	class:Migration
 dependencies	books/migrations/0001_initial.py	/^    dependencies = [$/;"	v	class:Migration
@@ -98,6 +109,12 @@ dependencies	books/migrations/0002_review.py	/^    dependencies = [$/;"	v	class:
 operations	books/migrations/0002_review.py	/^    operations = [$/;"	v	class:Migration
 name	books/migrations/0002_review.py	/^            name='Review',$/;"	v	class:Migration
 fields	books/migrations/0002_review.py	/^            fields=[$/;"	v	class:Migration
+Migration	books/migrations/0003_book_cover.py	/^class Migration(migrations.Migration):$/;"	c
+dependencies	books/migrations/0003_book_cover.py	/^    dependencies = [$/;"	v	class:Migration
+operations	books/migrations/0003_book_cover.py	/^    operations = [$/;"	v	class:Migration
+model_name	books/migrations/0003_book_cover.py	/^            model_name='book',$/;"	v	class:Migration
+name	books/migrations/0003_book_cover.py	/^            name='cover',$/;"	v	class:Migration
+field	books/migrations/0003_book_cover.py	/^            field=models.ImageField(blank=True, upload_to='covers\/'),$/;"	v	class:Migration
 main	manage.py	/^def main():$/;"	f
 calendars	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^    var DateTimeShortcuts = {$/;"	p	class:DateTimeShortcuts
 serverOffset	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var serverOffset = body.getAttribute('data-admin-utc-offset');$/;"	v
@@ -128,4 +145,22 @@ cal_main	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var cal_m
 shortcuts	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var shortcuts = quickElement('div', cal_box);$/;"	v
 day_link	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var day_link = quickElement('a', shortcuts, gettext('Yesterday'), 'href', '#');$/;"	v
 cancel_p	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var cancel_p = quickElement('p', cal_box);$/;"	v
-cancel_link	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var cancel_link = quickElement('a', cancel_p, gettext('Cancel'), 'hre
+cancel_link	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var cancel_link = quickElement('a', cancel_p, gettext('Cancel'), 'href', '#');$/;"	v
+cal_link	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var cal_link = document.getElementById(DateTimeShortcuts.calendarLinkName + num);$/;"	v
+inp	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var inp = DateTimeShortcuts.calendarInputs[num];$/;"	v
+id_to_windowname	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function id_to_windowname(text) {$/;"	f
+windowname_to_id	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function windowname_to_id(text) {$/;"	f
+showAdminPopup	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function showAdminPopup(triggeringLink, name_regexp, add_popup) {$/;"	f
+showRelatedObjectLookupPopup	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function showRelatedObjectLookupPopup(triggeringLink) {$/;"	f
+dismissRelatedLookupPopup	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function dismissRelatedLookupPopup(win, chosenId) {$/;"	f
+showRelatedObjectPopup	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function showRelatedObjectPopup(triggeringLink) {$/;"	f
+updateRelatedObjectLinks	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function updateRelatedObjectLinks(triggeringLink) {$/;"	f
+dismissAddRelatedObjectPopup	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function dismissAddRelatedObjectPopup(win, newId, newRepr) {$/;"	f
+dismissChangeRelatedObjectPopup	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function dismissChangeRelatedObjectPopup(win, objId, newRepr, newId) {$/;"	f
+dismissDeleteRelatedObjectPopup	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function dismissDeleteRelatedObjectPopup(win, objId) {$/;"	f
+fields	staticfiles/admin/js/prepopulate_init.js	/^    var fields = $('#django-admin-prepopulated-fields-constants').data('prepopulatedFields');$/;"	v
+monthsOfYear	staticfiles/admin/js/calendar.js	/^    var CalendarNamespace = {$/;"	p	class:CalendarNamespace
+todayDay	staticfiles/admin/js/calendar.js	/^            var todayDay = today.getDate();$/;"	v
+todayMonth	staticfiles/admin/js/calendar.js	/^            var todayMonth = today.getMonth() + 1;$/;"	v
+todayYear	staticfiles/admin/js/calendar.js	/^            var todayYear = today.getFullYear();$/;"	v
+todayClass	staticfiles/admin/js/calendar.js	/^            var today
