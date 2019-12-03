@@ -61,6 +61,11 @@ context_object_name	books/views.py	/^    context_object_name = 'book'$/;"	v	clas
 template_name	books/views.py	/^    template_name = 'books\/book_detail.html'$/;"	v	class:BookDetailView
 login_url	books/views.py	/^    login_url = 'account_login'$/;"	v	class:BookDetailView
 permission_required	books/views.py	/^    permission_required = 'books.special_status'$/;"	v	class:BookDetailView
+SearchResultsListView	books/views.py	/^class SearchResultsListView(ListView):$/;"	c
+model	books/views.py	/^    model = Book$/;"	v	class:SearchResultsListView
+context_object_name	books/views.py	/^    context_object_name = 'book_list'$/;"	v	class:SearchResultsListView
+template_name	books/views.py	/^    template_name = 'books\/search_results.html'$/;"	v	class:SearchResultsListView
+get_queryset	books/views.py	/^    def get_queryset(self):$/;"	m	class:SearchResultsListView
 Book	books/models.py	/^class Book(models.Model):$/;"	c
 id	books/models.py	/^    id = models.UUIDField($/;"	v	class:Book
 primary_key	books/models.py	/^            primary_key=True,$/;"	v	class:Book
@@ -159,8 +164,3 @@ dismissAddRelatedObjectPopup	staticfiles/admin/js/admin/RelatedObjectLookups.js	
 dismissChangeRelatedObjectPopup	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function dismissChangeRelatedObjectPopup(win, objId, newRepr, newId) {$/;"	f
 dismissDeleteRelatedObjectPopup	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function dismissDeleteRelatedObjectPopup(win, objId) {$/;"	f
 fields	staticfiles/admin/js/prepopulate_init.js	/^    var fields = $('#django-admin-prepopulated-fields-constants').data('prepopulatedFields');$/;"	v
-monthsOfYear	staticfiles/admin/js/calendar.js	/^    var CalendarNamespace = {$/;"	p	class:CalendarNamespace
-todayDay	staticfiles/admin/js/calendar.js	/^            var todayDay = today.getDate();$/;"	v
-todayMonth	staticfiles/admin/js/calendar.js	/^            var todayMonth = today.getMonth() + 1;$/;"	v
-todayYear	staticfiles/admin/js/calendar.js	/^            var todayYear = today.getFullYear();$/;"	v
-todayClass	staticfiles/admin/js/calendar.js	/^            var today
