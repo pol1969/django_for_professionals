@@ -5,6 +5,7 @@
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
 urlpatterns	bookstore_project/urls.py	/^urlpatterns = [$/;"	v
+urlpatterns	bookstore_project/urls.py	/^    urlpatterns = [$/;"	v
 application	bookstore_project/wsgi.py	/^application = get_wsgi_application()$/;"	v
 BASE_DIR	bookstore_project/settings.py	/^BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))$/;"	v
 SECRET_KEY	bookstore_project/settings.py	/^SECRET_KEY = os.environ.get('SECRET_KEY') $/;"	v
@@ -12,6 +13,9 @@ DEBUG	bookstore_project/settings.py	/^DEBUG = int(os.environ.get('DEBUG',default
 ALLOWED_HOSTS	bookstore_project/settings.py	/^ALLOWED_HOSTS = []$/;"	v
 INSTALLED_APPS	bookstore_project/settings.py	/^INSTALLED_APPS = [$/;"	v
 MIDDLEWARE	bookstore_project/settings.py	/^MIDDLEWARE = [$/;"	v
+CACHE_MIDDLEWARE_ALIAS	bookstore_project/settings.py	/^CACHE_MIDDLEWARE_ALIAS = 'default'$/;"	v
+CACHE_MIDDLEWARE_SECONDS	bookstore_project/settings.py	/^CACHE_MIDDLEWARE_SECONDS = 604800 $/;"	v
+CACHE_MIDDLEWARE_KEY_PREFIX	bookstore_project/settings.py	/^CACHE_MIDDLEWARE_KEY_PREFIX = ''$/;"	v
 ROOT_URLCONF	bookstore_project/settings.py	/^ROOT_URLCONF = 'bookstore_project.urls'$/;"	v
 TEMPLATES	bookstore_project/settings.py	/^TEMPLATES = [$/;"	v
 WSGI_APPLICATION	bookstore_project/settings.py	/^WSGI_APPLICATION = 'bookstore_project.wsgi.application'$/;"	v
@@ -47,6 +51,7 @@ ACCOUNT_UNIQUE_EMAIL	bookstore_project/settings.py	/^ACCOUNT_UNIQUE_EMAIL = True
 DEFAULT_FROM_EMAIL	bookstore_project/settings.py	/^DEFAULT_FROM_EMAIL = 'admin@djangobookstore.com'$/;"	v
 MEDIA_URL	bookstore_project/settings.py	/^MEDIA_URL = '\/media\/'$/;"	v
 MEDIA_ROOT	bookstore_project/settings.py	/^MEDIA_ROOT = os.path.join(BASE_DIR, 'media')$/;"	v
+INTERNAL_IPS	bookstore_project/settings.py	/^INTERNAL_IPS = [ip[:-1]   + "1" for ip in ips]$/;"	v
 urlpatterns	books/urls.py	/^urlpatterns = [$/;"	v
 BooksConfig	books/apps.py	/^class BooksConfig(AppConfig):$/;"	c
 name	books/apps.py	/^    name = 'books'$/;"	v	class:BooksConfig
@@ -76,6 +81,7 @@ author	books/models.py	/^    author = models.CharField(max_length=200)$/;"	v	cla
 price	books/models.py	/^    price = models.DecimalField(max_digits=6, decimal_places=2)$/;"	v	class:Book
 cover	books/models.py	/^    cover = models.ImageField(upload_to='covers\/', blank=True)$/;"	v	class:Book
 Meta	books/models.py	/^    class Meta:$/;"	c	class:Book
+indexes	books/models.py	/^        indexes = [$/;"	v	class:Book.Meta
 permissions	books/models.py	/^        permissions = [$/;"	v	class:Book.Meta
 __str__	books/models.py	/^    def __str__(self):                                                          $/;"	m	class:Book	file:
 get_absolute_url	books/models.py	/^    def get_absolute_url(self):$/;"	m	class:Book
@@ -160,7 +166,4 @@ showRelatedObjectLookupPopup	staticfiles/admin/js/admin/RelatedObjectLookups.js	
 dismissRelatedLookupPopup	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function dismissRelatedLookupPopup(win, chosenId) {$/;"	f
 showRelatedObjectPopup	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function showRelatedObjectPopup(triggeringLink) {$/;"	f
 updateRelatedObjectLinks	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function updateRelatedObjectLinks(triggeringLink) {$/;"	f
-dismissAddRelatedObjectPopup	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function dismissAddRelatedObjectPopup(win, newId, newRepr) {$/;"	f
-dismissChangeRelatedObjectPopup	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function dismissChangeRelatedObjectPopup(win, objId, newRepr, newId) {$/;"	f
-dismissDeleteRelatedObjectPopup	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function dismissDeleteRelatedObjectPopup(win, objId) {$/;"	f
-fields	staticfiles/admin/js/prepopulate_init.js	/^    var fields = $('#django-admin-prepopulated-fields-constants').data('prepopulatedFields');$/;"	v
+dismissAddRelatedObjectPopup	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    functio
