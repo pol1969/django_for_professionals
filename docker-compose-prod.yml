@@ -5,19 +5,13 @@ services:
         build: .
         command: python /code/manage.py runserver 0.0.0.0:8000
         environment:
-           - ENVIRONMENT=development 
+           - ENVIRONMENT=production 
            - SECRET_KEY=9j*0jf1qb5_0qmt^lz31(d&oc#--@i*#+lfk_4kd9=jbws&xx0
-           - DEBUG=1
-        volumes:
-           - .:/code
+           - DEBUG=0
+        
         ports:
            - 8000:8000
         depends_on:
             - db
     db:
         image: postgres:11
-        volumes:
-            - postgres_data:/var/lib/postgresql/data/
-
-volumes:
-    postgres_data:

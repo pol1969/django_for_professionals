@@ -8,9 +8,10 @@ urlpatterns	bookstore_project/urls.py	/^urlpatterns = [$/;"	v
 urlpatterns	bookstore_project/urls.py	/^    urlpatterns = [$/;"	v
 application	bookstore_project/wsgi.py	/^application = get_wsgi_application()$/;"	v
 BASE_DIR	bookstore_project/settings.py	/^BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))$/;"	v
+ENVIRONMENT	bookstore_project/settings.py	/^ENVIRONMENT = os.environ.get('ENVIRONMENT',default = 'development')$/;"	v
 SECRET_KEY	bookstore_project/settings.py	/^SECRET_KEY = os.environ.get('SECRET_KEY') $/;"	v
 DEBUG	bookstore_project/settings.py	/^DEBUG = int(os.environ.get('DEBUG',default=0))$/;"	v
-ALLOWED_HOSTS	bookstore_project/settings.py	/^ALLOWED_HOSTS = []$/;"	v
+ALLOWED_HOSTS	bookstore_project/settings.py	/^ALLOWED_HOSTS = ['.herokuapp.com','localhost','127.0.0.1']$/;"	v
 INSTALLED_APPS	bookstore_project/settings.py	/^INSTALLED_APPS = [$/;"	v
 MIDDLEWARE	bookstore_project/settings.py	/^MIDDLEWARE = [$/;"	v
 CACHE_MIDDLEWARE_ALIAS	bookstore_project/settings.py	/^CACHE_MIDDLEWARE_ALIAS = 'default'$/;"	v
@@ -52,6 +53,15 @@ DEFAULT_FROM_EMAIL	bookstore_project/settings.py	/^DEFAULT_FROM_EMAIL = 'admin@d
 MEDIA_URL	bookstore_project/settings.py	/^MEDIA_URL = '\/media\/'$/;"	v
 MEDIA_ROOT	bookstore_project/settings.py	/^MEDIA_ROOT = os.path.join(BASE_DIR, 'media')$/;"	v
 INTERNAL_IPS	bookstore_project/settings.py	/^INTERNAL_IPS = [ip[:-1]   + "1" for ip in ips]$/;"	v
+SECURE_BROWSER_XSS_FILTER	bookstore_project/settings.py	/^    SECURE_BROWSER_XSS_FILTER = True$/;"	v
+X_FRAME_OPTIONS	bookstore_project/settings.py	/^    X_FRAME_OPTIONS = 'DENY'$/;"	v
+SECURE_SSL_REDIRECT	bookstore_project/settings.py	/^    SECURE_SSL_REDIRECT = True$/;"	v
+SECURE_HSTS_SECONDS	bookstore_project/settings.py	/^    SECURE_HSTS_SECONDS = 3600$/;"	v
+SECURE_HSTS_INCLUDE_SUBDOMAINS	bookstore_project/settings.py	/^    SECURE_HSTS_INCLUDE_SUBDOMAINS = True$/;"	v
+SECURE_HSTS_PRELOAD	bookstore_project/settings.py	/^    SECURE_HSTS_PRELOAD = True$/;"	v
+SECURE_CONTENT_TYPE_NOSNIFF	bookstore_project/settings.py	/^    SECURE_CONTENT_TYPE_NOSNIFF = True$/;"	v
+SESSION_COOKIE_SECURE	bookstore_project/settings.py	/^    SESSION_COOKIE_SECURE = True$/;"	v
+CSRF_COOKIE_SECURE	bookstore_project/settings.py	/^    CSRF_COOKIE_SECURE = True$/;"	v
 urlpatterns	books/urls.py	/^urlpatterns = [$/;"	v
 BooksConfig	books/apps.py	/^class BooksConfig(AppConfig):$/;"	c
 name	books/apps.py	/^    name = 'books'$/;"	v	class:BooksConfig
@@ -126,6 +136,11 @@ operations	books/migrations/0003_book_cover.py	/^    operations = [$/;"	v	class:
 model_name	books/migrations/0003_book_cover.py	/^            model_name='book',$/;"	v	class:Migration
 name	books/migrations/0003_book_cover.py	/^            name='cover',$/;"	v	class:Migration
 field	books/migrations/0003_book_cover.py	/^            field=models.ImageField(blank=True, upload_to='covers\/'),$/;"	v	class:Migration
+Migration	books/migrations/0005_auto_20191203_1148.py	/^class Migration(migrations.Migration):$/;"	c
+dependencies	books/migrations/0005_auto_20191203_1148.py	/^    dependencies = [$/;"	v	class:Migration
+operations	books/migrations/0005_auto_20191203_1148.py	/^    operations = [$/;"	v	class:Migration
+model_name	books/migrations/0005_auto_20191203_1148.py	/^            model_name='book',$/;"	v	class:Migration
+index	books/migrations/0005_auto_20191203_1148.py	/^            index=models.Index(fields=['id'], name='id_index'),$/;"	v	class:Migration
 main	manage.py	/^def main():$/;"	f
 calendars	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^    var DateTimeShortcuts = {$/;"	p	class:DateTimeShortcuts
 serverOffset	staticfiles/admin/js/admin/DateTimeShortcuts.js	/^            var serverOffset = body.getAttribute('data-admin-utc-offset');$/;"	v
@@ -166,4 +181,28 @@ showRelatedObjectLookupPopup	staticfiles/admin/js/admin/RelatedObjectLookups.js	
 dismissRelatedLookupPopup	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function dismissRelatedLookupPopup(win, chosenId) {$/;"	f
 showRelatedObjectPopup	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function showRelatedObjectPopup(triggeringLink) {$/;"	f
 updateRelatedObjectLinks	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function updateRelatedObjectLinks(triggeringLink) {$/;"	f
-dismissAddRelatedObjectPopup	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    functio
+dismissAddRelatedObjectPopup	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function dismissAddRelatedObjectPopup(win, newId, newRepr) {$/;"	f
+dismissChangeRelatedObjectPopup	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function dismissChangeRelatedObjectPopup(win, objId, newRepr, newId) {$/;"	f
+dismissDeleteRelatedObjectPopup	staticfiles/admin/js/admin/RelatedObjectLookups.js	/^    function dismissDeleteRelatedObjectPopup(win, objId) {$/;"	f
+fields	staticfiles/admin/js/prepopulate_init.js	/^    var fields = $('#django-admin-prepopulated-fields-constants').data('prepopulatedFields');$/;"	v
+monthsOfYear	staticfiles/admin/js/calendar.js	/^    var CalendarNamespace = {$/;"	p	class:CalendarNamespace
+todayDay	staticfiles/admin/js/calendar.js	/^            var todayDay = today.getDate();$/;"	v
+todayMonth	staticfiles/admin/js/calendar.js	/^            var todayMonth = today.getMonth() + 1;$/;"	v
+todayYear	staticfiles/admin/js/calendar.js	/^            var todayYear = today.getFullYear();$/;"	v
+todayClass	staticfiles/admin/js/calendar.js	/^            var todayClass = '';$/;"	v
+isSelectedMonth	staticfiles/admin/js/calendar.js	/^            var isSelectedMonth = false;$/;"	v
+calDiv	staticfiles/admin/js/calendar.js	/^            var calDiv = document.getElementById(div_id);$/;"	v
+calTable	staticfiles/admin/js/calendar.js	/^            var calTable = document.createElement('table');$/;"	v
+tableBody	staticfiles/admin/js/calendar.js	/^            var tableBody = quickElement('tbody', calTable);$/;"	v
+tableRow	staticfiles/admin/js/calendar.js	/^            var tableRow = quickElement('tr', tableBody);$/;"	v
+days	staticfiles/admin/js/calendar.js	/^            var days = CalendarNamespace.getDaysInMonth(month, year);$/;"	v
+nonDayCell	staticfiles/admin/js/calendar.js	/^            var nonDayCell;$/;"	v
+onClick	staticfiles/admin/js/calendar.js	/^                function onClick(e) {$/;"	f	function:calendarMonth
+calendarMonth	staticfiles/admin/js/calendar.js	/^            function calendarMonth(y, m) {$/;"	f
+currentDay	staticfiles/admin/js/calendar.js	/^            var currentDay = 1;$/;"	v
+Calendar	staticfiles/admin/js/calendar.js	/^    function Calendar(div_id, callback, selected) {$/;"	c
+drawCurrent	staticfiles/admin/js/calendar.js	/^    Calendar.prototype = {$/;"	m	class:Calendar
+drawDate	staticfiles/admin/js/calendar.js	/^        },$/;"	m	class:Calendar
+drawPreviousMonth	staticfiles/admin/js/calendar.js	/^        },$/;"	m	class:Calendar
+drawNextMonth	staticfiles/admin/js/calendar.js	/^        },$/;"	m	class:Calendar
+drawPreviousYear	staticfiles/admin/js/calendar.js	/^        },$/;
