@@ -62,6 +62,7 @@ SECURE_HSTS_PRELOAD	bookstore_project/settings.py	/^    SECURE_HSTS_PRELOAD = Tr
 SECURE_CONTENT_TYPE_NOSNIFF	bookstore_project/settings.py	/^    SECURE_CONTENT_TYPE_NOSNIFF = True$/;"	v
 SESSION_COOKIE_SECURE	bookstore_project/settings.py	/^    SESSION_COOKIE_SECURE = True$/;"	v
 CSRF_COOKIE_SECURE	bookstore_project/settings.py	/^    CSRF_COOKIE_SECURE = True$/;"	v
+db_from_env	bookstore_project/settings.py	/^db_from_env = dj_database_url.config(conn_max_age=500)$/;"	v
 urlpatterns	books/urls.py	/^urlpatterns = [$/;"	v
 BooksConfig	books/apps.py	/^class BooksConfig(AppConfig):$/;"	c
 name	books/apps.py	/^    name = 'books'$/;"	v	class:BooksConfig
@@ -204,5 +205,4 @@ Calendar	staticfiles/admin/js/calendar.js	/^    function Calendar(div_id, callba
 drawCurrent	staticfiles/admin/js/calendar.js	/^    Calendar.prototype = {$/;"	m	class:Calendar
 drawDate	staticfiles/admin/js/calendar.js	/^        },$/;"	m	class:Calendar
 drawPreviousMonth	staticfiles/admin/js/calendar.js	/^        },$/;"	m	class:Calendar
-drawNextMonth	staticfiles/admin/js/calendar.js	/^        },$/;"	m	class:Calendar
-drawPreviousYear	staticfiles/admin/js/calendar.js	/^        },$/;
+drawNextMonth	staticfiles/admin/js/calend
